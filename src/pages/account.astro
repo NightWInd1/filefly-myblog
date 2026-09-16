@@ -1,0 +1,14 @@
+---
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import AuthPanel from "@components/supabase/AuthPanel.svelte";
+import StorageUploader from "@components/supabase/StorageUploader.svelte";
+import RealtimeComments from "@components/supabase/RealtimeComments.svelte";
+---
+
+<MainGridLayout title="账户">
+	<div class="grid w-full gap-6">
+		<AuthPanel client:load />
+		<StorageUploader client:load />
+		<RealtimeComments client:load postSlug="account-demo" />
+	</div>
+</MainGridLayout>

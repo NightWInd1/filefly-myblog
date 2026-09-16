@@ -1,0 +1,9 @@
+project_id = "firefly"
+
+[functions.health]
+verify_jwt = false
+
+[functions.create-upload-url]
+# The function validates the bearer token with auth.getUser(), including
+# projects using asymmetric JWT signing keys.
+verify_jwt = false
